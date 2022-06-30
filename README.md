@@ -34,7 +34,8 @@ this is some pic for the work going on
 
 
 * we will try to deployed it to Heroku 
-
+[link for heroku](https://realtime-chat-team1.herokuapp.com/)
 
 * And we have stretch goal to do sign up page then each user should sign in using user name and password
+
 ![link](./public/image/Screenshot%20(338).png) 
