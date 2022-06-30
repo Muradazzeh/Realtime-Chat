@@ -1,6 +1,11 @@
 # Realtime-Chat
 ### IN this project I will try to follow up open resourses to build realtime chat 
 
+
+##  we will try to deployed it to Heroku 
+
+ ### [link for heroku](https://realtime-chat-team1.herokuapp.com/)
+
 ## introduction 
 Realtime Chat With Users & Rooms 
 * in this project we tryed to make live chat that any user can join on a spacific room , and he can send and recive messages from other user , 
@@ -33,8 +38,7 @@ this is some pic for the work going on
 ![link](./public/image/Screenshot%20(337).png)
 
 
-* we will try to deployed it to Heroku 
-[link for heroku](https://realtime-chat-team1.herokuapp.com/)
+
 
 * And we have stretch goal to do sign up page then each user should sign in using user name and password
 
