@@ -37,6 +37,14 @@ a {
 	border: 0;
 	font-size: 17px;
 }
+.a{
+	cursor: pointer;
+	padding: 5px 15px;
+	background: green;
+	color: black;
+	border: 0;
+	font-size: 17px;
+}
 
 /* Chat Page */
 
