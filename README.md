@@ -48,12 +48,12 @@ this is some pic for the work going on
 
 
 > ## update 
-* I added extra sign up button so when you click it , we will move to the sign up page and u can fill your data as shown below : 
+* We added extra sign up button so when you click it , we will move to the sign up page and u can fill your data as shown below : 
 
 ![link](./public/image/Screenshot%20(346).png)
 ![link](./public/image/Screenshot%20(347).png)
 
-* also I connected the app to My data base so all user will be saved in our data base 
+* also we connected the app to My data base so all user will be saved in our data base 
 
 ![link](./public/image/Screenshot%20(350).png)
 
