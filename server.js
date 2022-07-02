@@ -2,7 +2,13 @@
 require("dotenv").config()
 const path= require("path")
 const http=require("http")
+const bcrypt = require('bcrypt');
+const { Users }  = require("./public/UserModel/Index");
+const { db } = require("./public/UserModel/Index")
 const socketio=require("socket.io")
+const bodyParser = require('body-parser'); // Middleware
+
+
 const formatMessages=require("./model/message")
 
 const{ userJoin,getUsers,userLeave,getRoomUsers }=require("./model/users")
@@ -14,9 +20,20 @@ const server= http.createServer(app)
 const io=socketio(server)
 
 const botname="chat chat bot"
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname,"public")))
-
-
+app.get('/signup', (req, res) => {
+    res.sendFile(__dirname + '/public/signup.html');
+  });
+app.post("/signup",SignUp)
+async function SignUp(req,res){
+    try {
+        req.body.password = await bcrypt.hash(req.body.password, 4);
+        const record = await Users.create(req.body);
+        res.status(201).json(record);
+      } catch (e) { res.status(403).send('Error Creating User'); }
+    
+}
 
 io.on("connection", socket =>{
     console.log("New Connection")
@@ -50,7 +67,7 @@ socket.on("disconnect", () =>{
     const user = userLeave(socket.id)
     if(user){
         io.to(user.room).emit("message",formatMessages(botname,`${user.username} has left the chat`))
-        
+
         io.to(user.room).emit('roomUsers',{
             room:user.room,
             users:getRoomUsers(user.room)
@@ -63,7 +80,10 @@ socket.on("disconnect", () =>{
 
 
 const PORT = process.env.PORT || 3020
-
+db.sync()
+    .then(() => {
 server.listen(PORT,()=>{
     console.log(`Hey my friend I am running at port ${PORT}`)
 })
+})
+.catch(console.error);

@@ -5,6 +5,8 @@
 ##  we will try to deployed it to Heroku 
 
  ### [link for heroku](https://realtime-chat-team1.herokuapp.com/)
+ * heroku app pic
+ ![link](./public/image/Screenshot%20(354).png)
 
 ## introduction 
 Realtime Chat With Users & Rooms 
@@ -43,3 +45,23 @@ this is some pic for the work going on
 * And we have stretch goal to do sign up page then each user should sign in using user name and password
 
 ![link](./public/image/Screenshot%20(338).png) 
+
+
+> ## update 
+* I added extra sign up button so when you click it , we will move to the sign up page and u can fill your data as shown below : 
+
+![link](./public/image/Screenshot%20(346).png)
+![link](./public/image/Screenshot%20(347).png)
+
+* also I connected the app to My data base so all user will be saved in our data base 
+
+![link](./public/image/Screenshot%20(350).png)
+
+* And after you fill your data and hit sign up button it will be saved on the data base and we will get this sample result 
+
+![link](./public/image/Screenshot%20(348).png)
+![link](./public/image/Screenshot%20(352).png)
+![link](./public/image/Screenshot%20(349).png)
+
+
+> ## the last stretch goal is that the user cant join until he sign up 

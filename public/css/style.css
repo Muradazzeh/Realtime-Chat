@@ -38,13 +38,20 @@ a {
 	font-size: 17px;
 }
 .a{
+    display: block;
+    float:right;
+    margin-right: 100px;
 	cursor: pointer;
 	padding: 5px 15px;
-	background: green;
+	background: rgb(138, 139, 141);
 	color: black;
 	border: 0;
 	font-size: 17px;
 }
+.a:hover {
+    box-shadow: inset 100px 0 0 0 #e3ce17;
+    color: rgb(247, 12, 40);
+  }
 
 /* Chat Page */
 
@@ -169,6 +176,12 @@ a {
 }
 
 .join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+.join-main input[type='password'] {
 	font-size: 16px;
 	padding: 5px;
 	height: 40px;
